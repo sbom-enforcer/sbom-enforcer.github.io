@@ -18,16 +18,12 @@ name: Deploy documentation to GitHub Pages
 on:
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+permissions: { }
 
 jobs:
-  deploy:
+  deploy-sbom-enforcer:
     uses: sbom-enforcer/sbom-enforcer/.github/workflows/deploy-site.yaml@main
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
