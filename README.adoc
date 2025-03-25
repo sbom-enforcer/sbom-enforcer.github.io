@@ -1,0 +1,1 @@
+This repository contains workflows to publish to `https://sbom-enforcer.github.io` main website.
