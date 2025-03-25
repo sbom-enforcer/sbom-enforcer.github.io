@@ -50,12 +50,6 @@ jobs:
           --show-version --batch-mode --errors --no-transfer-progress \
           process-classes site site:stage
 
-      - name: Upload site
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # 4.6.2
-        with:
-          name: site
-          path: target/site
-
       - name: Upload static site
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # 3.0.1
         with:
