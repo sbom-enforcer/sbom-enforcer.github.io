@@ -21,7 +21,7 @@ on:
       ref:
         description: "The branch to build"
         type: string
-        default: refs/heads/main
+        default: refs/heads/site
 
 permissions: { }
 
@@ -48,6 +48,7 @@ jobs:
         run: |
           ./mvnw \
           --show-version --batch-mode --errors --no-transfer-progress \
+          -Prelease \
           process-classes site site:stage
 
       - name: Upload static site
