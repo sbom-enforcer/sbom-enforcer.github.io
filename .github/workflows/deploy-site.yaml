@@ -48,6 +48,7 @@ jobs:
         run: |
           ./mvnw \
           --show-version --batch-mode --errors --no-transfer-progress \
+          -Dgpg.skip \
           -Prelease \
           verify site site:stage
 
